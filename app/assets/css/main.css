@@ -1,5 +1,11 @@
 @import "tailwindcss";
 @import "./tokens.css";
+@import "./icons.css";
+@import "./lenis.css";
+
+@utility container {
+   @apply mx-auto px-8;
+}
 
 :root {
    @apply bg-background text-foreground antialiased;
