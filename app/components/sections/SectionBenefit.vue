@@ -13,6 +13,7 @@
                   src="/img/coffee-beans.jpg"
                   :quality="50"
                   format="webp"
+                  loading="lazy"
                   class="h-full w-full object-cover"
                />
             </div>
@@ -29,6 +30,7 @@
                   src="/img/barista.jpg"
                   :quality="50"
                   format="webp"
+                  loading="lazy"
                   class="h-full w-full object-cover"
                />
             </div>
@@ -44,6 +46,7 @@
                   src="/img/coffee-shop.jpg"
                   :quality="50"
                   format="webp"
+                  loading="lazy"
                   class="h-full w-full object-cover"
                />
             </div>

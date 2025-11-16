@@ -28,25 +28,27 @@ const mobileMenu = shallowRef(false)
 </script>
 
 <template>
-   <AppHeader
-      ref="header"
-      class="bg-background fixed inset-x-0 top-0 z-999 transition-transform duration-800 ease-in-out"
-      v-model:mobile-menu="mobileMenu"
-   />
-   <Transition
-      name="fade"
-      mode="out-in"
-   >
-      <div
-         v-if="mobileMenu"
-         class="bg-background fixed inset-0 z-99 h-full w-full overflow-y-auto"
-         data-lenis-prevent
+   <ClientOnly>
+      <AppHeader
+         ref="header"
+         class="bg-background fixed inset-x-0 top-0 z-999 transition-transform duration-800 ease-in-out"
+         v-model:mobile-menu="mobileMenu"
+      />
+      <Transition
+         name="fade"
+         mode="out-in"
       >
-         <div class="mt-(--header-height-sm) md:mt-(--header-height)">
-            <AppMobileMenu v-model:mobile-menu="mobileMenu" />
+         <div
+            v-if="mobileMenu"
+            class="bg-background fixed inset-0 z-99 h-full w-full overflow-y-auto"
+            data-lenis-prevent
+         >
+            <div class="mt-(--header-height-sm) md:mt-(--header-height)">
+               <AppMobileMenu v-model:mobile-menu="mobileMenu" />
+            </div>
          </div>
-      </div>
-   </Transition>
+      </Transition>
+   </ClientOnly>
    <VueLenis
       root
       :options="lenisOptions"

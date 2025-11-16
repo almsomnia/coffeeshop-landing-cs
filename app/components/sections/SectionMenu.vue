@@ -84,6 +84,8 @@ const formatPrice = (price: number) => {
                      <NuxtImg
                         :src="item.img"
                         :quality="25"
+                        format="webp"
+                        loading="lazy"
                         class="aspect-2/3 h-auto w-[33vw] md:w-[25vw] object-cover"
                      />
                   </div>
