@@ -12,7 +12,7 @@
             src="/img/hero.jpg"
             :quality="50"
             format="webp"
-            loading="lazy"
+            preload
             class="h-full w-full object-cover"
          />
       </div>
