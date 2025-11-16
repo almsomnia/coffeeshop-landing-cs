@@ -50,13 +50,13 @@ const formatPrice = (price: number) => {
 
 <template>
    <div>
-      <div class="w-1/2">
-         <p class="mb-12 text-4xl font-semibold text-pretty">
+      <div class="w-full md:w-3/4 xl:w-1/2">
+         <p class="mb-12 text-2xl md:text-4xl font-semibold text-pretty">
             Well-curated choices made with only high-quality ingredients.
          </p>
       </div>
-      <div class="mb-8 flex items-center justify-between">
-         <ul class="flex list-none gap-8 [&_li]:cursor-pointer">
+      <div class="mb-8 flex items-center justify-end md:justify-between">
+         <ul class="hidden md:flex list-none gap-8 [&_li]:cursor-pointer">
             <li
                v-for="category in categories"
                @click="selectedCategory = category.value"
@@ -77,17 +77,17 @@ const formatPrice = (price: number) => {
          </button>
       </div>
       <div class="overflow-x-auto">
-         <div class="flex items-center gap-12">
+         <div class="flex items-center gap-4 md:gap-12">
             <template v-for="item in filteredMenu">
                <div class="shrink-0">
                   <div class="overflow-hidden">
                      <NuxtImg
                         :src="item.img"
                         :quality="25"
-                        class="aspect-2/3 h-auto w-[25vw] object-cover"
+                        class="aspect-2/3 h-auto w-[33vw] md:w-[25vw] object-cover"
                      />
                   </div>
-                  <div class="my-4">
+                  <div class="my-2 lg:my-4">
                      <div class="font-medium">
                         {{ item.name }}
                      </div>

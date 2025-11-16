@@ -16,20 +16,37 @@ watch(
       const el = header.value.$el as HTMLElement
       const className = "-translate-y-full"
 
-      if (yVal < 100 || scrollingUp) {
+      if (yVal < 100 || scrollingUp || mobileMenu.value) {
          el.classList.remove(className)
       } else if (scrollingDown) {
          el.classList.add(className)
       }
    }
 )
+
+const mobileMenu = shallowRef(false)
 </script>
 
 <template>
    <AppHeader
       ref="header"
       class="bg-background fixed inset-x-0 top-0 z-999 transition-transform duration-800 ease-in-out"
+      v-model:mobile-menu="mobileMenu"
    />
+   <Transition
+      name="fade"
+      mode="out-in"
+   >
+      <div
+         v-if="mobileMenu"
+         class="bg-background fixed inset-0 z-99 h-full w-full overflow-y-auto"
+         data-lenis-prevent
+      >
+         <div class="mt-(--header-height-sm) md:mt-(--header-height)">
+            <AppMobileMenu v-model:mobile-menu="mobileMenu" />
+         </div>
+      </div>
+   </Transition>
    <VueLenis
       root
       :options="lenisOptions"
@@ -42,3 +59,15 @@ watch(
       <AppFooter />
    </VueLenis>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+   transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+   opacity: 0;
+}
+</style>

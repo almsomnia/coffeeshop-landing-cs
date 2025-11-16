@@ -5,7 +5,9 @@ const menu = computed(() => $appMenu().filter((item) => item.key == "nav"))
 <template>
    <footer class="border-foreground border-t">
       <div class="container">
-         <div class="my-16 flex justify-between">
+         <div
+            class="my-16 flex flex-col-reverse justify-between gap-12 md:flex-row md:gap-0"
+         >
             <div class="">
                <ul class="list-none [&_li:not(:last-child)]:mb-4">
                   <li v-for="item in menu">
@@ -15,8 +17,8 @@ const menu = computed(() => $appMenu().filter((item) => item.key == "nav"))
                   </li>
                </ul>
             </div>
-            <div class="w-2/5">
-               <p class="mb-8">Sign up for our latest promos</p>
+            <div class="md:w-2/5">
+               <p class="mb-4 md:mb-8">Sign up for our latest promos</p>
                <div class="relative">
                   <input
                      type="text"
@@ -33,10 +35,8 @@ const menu = computed(() => $appMenu().filter((item) => item.key == "nav"))
             </div>
          </div>
       </div>
-      <div class="flex items-center justify-center mb-4">
-         <span class="text-sm">
-            &copy; 2025 Vrewa. All Rights Reserved.
-         </span>
+      <div class="mb-4 flex items-center justify-center">
+         <span class="text-sm"> &copy; 2025 Vrewa. All Rights Reserved. </span>
       </div>
    </footer>
 </template>
