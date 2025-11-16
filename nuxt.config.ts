@@ -9,4 +9,17 @@ export default defineNuxtConfig({
       plugins: [tailwindcss()],
    },
    css: ["./app/assets/css/main.css"],
+   components: {
+      dirs: [
+         {
+            path: "@/components",
+            pathPrefix: false,
+         }
+      ]
+   },
+   fonts: {
+      defaults: {
+         weights: [200, 300, 400, 500, 600, 700, 800, 900]
+      }
+   }
 })
