@@ -54,7 +54,7 @@ const mobileMenu = shallowRef(false)
       :options="lenisOptions"
    >
       <main class="min-h-screen">
-         <div class="pt-[calc(var(--header-height)+4rem)] pb-16">
+         <div class="pt-[calc(var(--header-height-sm)+4rem)] md:pt-[calc(var(--header-height)+4rem)] pb-32">
             <slot />
          </div>
       </main>

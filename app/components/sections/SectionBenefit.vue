@@ -1,6 +1,6 @@
 <template>
    <div>
-      <div class="space-y-24">
+      <div class="space-y-16 md:space-y-36">
          <div class="flex flex-col">
             <div class="md:w-3/4 lg:w-1/2">
                <p class="mb-4 md:mb-12 text-lg md:text-2xl font-medium text-pretty">

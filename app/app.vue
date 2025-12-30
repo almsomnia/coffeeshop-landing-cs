@@ -21,7 +21,7 @@ useHead({
    <div>
       <NuxtRouteAnnouncer />
       <NuxtLayout>
-         <div class="space-y-24">
+         <div class="space-y-24 md:space-y-48">
             <SectionHero class="container" />
             <SectionBenefit class="container" />
             <SectionMenu class="container" />

@@ -4,7 +4,7 @@ const mobileMenu = defineModel<boolean>("mobileMenu", {
    default: false,
 })
 
-const menu = $appMenu()
+const menu = $appMenu().filter((item) => item.key !== "logo")
 </script>
 
 <template>
