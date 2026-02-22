@@ -7,3 +7,5 @@
 .nuxt
 .output
 *.md
+Dockerfile
+*.lock
