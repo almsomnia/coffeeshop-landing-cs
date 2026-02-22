@@ -1,0 +1,14 @@
+name: vrewa
+services:
+  app:
+    image: vrewa
+    container_name: vrewa
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3010:3010"
+    environment:
+      - NODE_ENV=production
+      - PORT=3010
+    restart: unless-stopped
