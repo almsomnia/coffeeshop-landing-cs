@@ -10,7 +10,8 @@
       <div class="h-[65vh] md:h-auto">
          <NuxtImg
             src="/img/hero.jpg"
-            :quality="50"
+            alt="A professional flat lay of the coffee-making process on a dark wooden surface, featuring roasted beans, ground coffee in a portafilter, and a finished latte with heart-shaped foam art."
+            :quality="75"
             format="webp"
             preload
             class="h-full w-full object-cover"

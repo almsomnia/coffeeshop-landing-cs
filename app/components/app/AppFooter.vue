@@ -3,7 +3,7 @@ const menu = computed(() => $appMenu().filter((item) => item.key == "nav"))
 </script>
 
 <template>
-   <footer class="bg-foreground text-background border-t">
+   <footer class="border-t">
       <div class="container">
          <div
             class="my-16 flex flex-col-reverse justify-between gap-12 md:flex-row md:gap-0"
@@ -29,7 +29,7 @@ const menu = computed(() => $appMenu().filter((item) => item.key == "nav"))
                      class="absolute inset-y-0 right-0 flex cursor-pointer items-center justify-between px-5 text-foreground"
                   >
                      Subscribe
-                     <span class="heroicons--arrow-right ms-1" />
+                     <span class="heroicons--arrow-right ms-1 mt-0.5" />
                   </button>
                </div>
             </div>

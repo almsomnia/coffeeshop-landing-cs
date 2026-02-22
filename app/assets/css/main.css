@@ -10,3 +10,11 @@
 :root {
    @apply bg-background text-foreground antialiased;
 }
+
+@utility scrollbar-hidden {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+   &::-webkit-scrollbar {
+      display: none;
+   }
+}
